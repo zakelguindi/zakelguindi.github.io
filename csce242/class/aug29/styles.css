@@ -1,4 +1,37 @@
 /* cascading style sheets- CSS */
+/* structure */
 body{
   background-color: moccasin;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+/* Tables */
+td, th { /* applies to both td and th */ 
+  border: 2px solid rgb(203, 0, 54);
+  background-color: palegreen;
+}
+
+th{
+  background-color: tomato;
+}
+
+/* typography (fonts)  */
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color:sienna;
+  background-color: aquamarine;
+}
+h1{
+  color:slateblue;
+  background-color: burlywood;
+}
+h2{
+  color:olivedrab;
+  background-color: violet;
 }
