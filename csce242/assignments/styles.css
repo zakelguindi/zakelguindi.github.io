@@ -1,0 +1,13 @@
+body {
+  background-color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td, th{
+  border: 2px solid;
+}
