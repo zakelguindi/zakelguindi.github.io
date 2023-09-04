@@ -1,4 +1,37 @@
 body{
-  color-scheme: red;
   background-color: antiquewhite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url(images/liverpool.png);
+}
+
+#content {
+  margin: auto;
+  background-color: rgba(228, 102, 113, 0.9);
+  width: 75%;
+  padding: 0 5px;
+  color:antiquewhite;
+  box-shadow: 10px 10px, #038C73;
+}
+
+a {
+  color: antiquewhite;
+}
+
+a:hover {
+  color: #038C73
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #a8000e;
+}
+
+img {
+  border: 6px solid;
+  border-radius: 5px;
+}
+
+th, td {
+  border: 1px solid antiquewhite;
+  padding: 3px
 }

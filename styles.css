@@ -1,4 +1,19 @@
 body {
-  background-color: beige;
-  color-scheme: red;
+  /* background-color:papayawhip; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* text-decoration: none; */
+  /* color: #73030D; */
+  background-color: #D20012;
+  /* color: #038C73; */
+}
+
+#content {
+  background:aliceblue;
+  color: #D20012;
+  width: 75%;
+}
+
+#links {
+  text-decoration: none;
+  color:#038C73;
 }
