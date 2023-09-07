@@ -1,0 +1,96 @@
+/*Structure */ 
+
+body {
+  font-family:Arial, Helvetica, sans-serif; 
+}
+
+#main-header, 
+#main-footer{
+  margin: auto; /*centering */ 
+  width:80%; 
+  background-color: burlywood; 
+  padding: 5px; 
+
+}
+
+#main-footer {
+  background-color: maroon; /*updates footer background */ 
+}
+
+/*Any Horizontal navigation */ 
+.horizontal-nav ul {
+  padding-left: 0px; /*no padding on bullet- moves it left */ 
+}
+
+.horizontal-nav li {
+  list-style-type: none; /*no bullets */ 
+  /* margin: 5px; ---- puts 5px spacing all around it  */
+  margin: 0 5px; /*puts 5px spacing on top and bottom but not sides */
+}
+
+.horizontal-nav a {
+  text-decoration: none; /*gets rid of underline on link */ 
+}
+
+/*Main nav */ 
+
+/*User Navigation -----> check w3schools flexbox */ 
+
+/* Typography */ 
+h1 {
+  text-align: center; /* centers text */
+}
+
+#main-footer, 
+#main-footer a{
+  color: white; 
+}
+
+#main-footer ul{
+  padding-left: 1%;
+}
+
+#main-footer li {
+  list-style-type: none;;
+}
+
+#main-footer a{
+  text-decoration: none;
+}
+
+.footer-logo-text {
+  font-size: 1.5em; 
+}
+
+/*Larger Resolution */ 
+
+@media only screen and (min-width: 768px) {
+  .horizontal-nav ul, 
+  .flex-container{
+    display: flex; /*container that holds li to have it appear horizontally */
+  }
+
+  #main-nav ul{
+    justify-content: center; /* centers all main-nav stuff*/
+  }
+
+  #user-nav ul{
+    justify-content: flex-end;
+  }
+
+  #user-nav {
+    /* Solution 1: absolute-position it by sticking it in the top right 
+    position:absolute; 
+    top: 0%; 
+    right:10%; */ 
+  }
+
+  /* second method, see line 43 here and 11 in index.html as well*/ 
+  .flex-container {
+    justify-content:space-between;
+  }
+
+  .col1of2 {
+    flex: 1; 
+  }
+}
