@@ -1,0 +1,4 @@
+Passed 2 inches == 5.08 centimeters test
+Passed 2 inches < 5.08 centimeters test
+Passed 4 inches == 4 inches test
+Failed variables: 2 inches, 5.08 centimeters, 4 inches!!10 centimeters == 4 inches test

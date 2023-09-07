@@ -1,0 +1,3 @@
+virtual ~myclass //if no pointers, make an empty body for virtual destructor 
+//if you have virtual functions, need a virtual destructor. if there are pointers, destructor must free them up 
+

@@ -1,0 +1,32 @@
+today- namespaces and intro to inheritance
+
+namespace is a way to collect a number of related items under a single name 
+
+benefit- not worrying about creating a variable/function/class with the same name as an existing one in an included library
+
+to create a namespace OR add to an existing namespace:
+
+namespace namespace_name { // use the team/project/directory in the namespace name 
+
+}
+
+to access an item from a namespace there are three options:  
+  1. qualify the item with namespace and the scope resolution operator 
+    e.g. "std::cout; "
+  2. using declaration: using namespace::itemname 
+    e.g. "using std::cout"
+  3. using directive for the entire namespace:  using namespace namespace_name
+
+composition (has a) - objects of one class are used as data members in another  
+inheritance (is a) - objects of one class inherit all the data members of another 
+  base class - derived class
+  parent class - child class 
+  ancestor - descendant 
+
+Rectangle (parent) - Square (child)
+
+To create a derived class: 
+  class <DERIVED_CLASS_NAME> : inheritance_type(public/private/protected) <BASE_CLASS_NAME> {
+  };
+
+  public inheritance

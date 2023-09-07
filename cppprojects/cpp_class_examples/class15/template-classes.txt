@@ -1,0 +1,7 @@
+Template classes - pattern/structure for a class whose functionality is independent of the types of data members 
+
+To define a template class - above the class defintion: 
+  template <class identifier> 
+
+To instantiate an object of a template class: 
+  class_name<type of the template> object_name

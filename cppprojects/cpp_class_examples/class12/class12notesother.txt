@@ -1,0 +1,14 @@
+reference = address 
+  reference operator & 
+dereference = go to an address and get the value that's there
+  dereference operator: * 
+pointer = a variable that holds an address as its value 
+  type_of_thing_you_want_to_point_to * pointer_variable_name 
+
+int x = 7; 
+int * xptr = &x 
+cout << x << "will print 7" << *xptr << "also prints 7" << endl; 
+
+
+call-by-reference 
+pointer parameters 

@@ -1,0 +1,13 @@
+Polymorphism- a single function call / action that can take different forms based on the situation 
+
+virtual function - function that uses dynamic / late binding. is bound to run time based on the type of object the pointer points to at the time 
+redefined function - use static binding - function call 
+
+virtual functions need to be set as virtual in the base class 
+they must be implemented or made as "pure virtual". 
+
+if a class has a pure virtual function, it is an "abstract class" and we can't instantiate object of that class 
+
+when your class has virtual functions- make the destructor virtual so that when 
+memory is freed for a base class pointer to a derived class object, all the correct 
+destructors will be called 
