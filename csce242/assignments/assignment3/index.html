@@ -21,56 +21,51 @@
   </header>
 
   <main> 
-    <section class="main-content">
-      <header class="padded-area">
+    <div class="main">
+      <section id="main-thing" class="main-content">
         <h1>Main Content</h1>
-      </header>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus
-        lacus augue. Duis sed tincidunt sapien. Praesent suscipit urna dui,
-        viverra congue tellus consequat vitae. Vestibulum blandit sem vitae</p>
-    </section>
-    <section class="main-content">
-      <header class="padded-area">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus
+          lacus augue. Duis sed tincidunt sapien. Praesent suscipit urna dui,
+          viverra congue tellus consequat vitae. Vestibulum blandit sem vitae</p>
+      </section>
+      <section id="sidebar" class="main-content">
         <h1>Sidebar</h1>
-      </header>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>
-    </section>
-    <section class="column-content">
-      <header class="padded-area">
-        <h2>Column 1 of 2</h2>
-        <header class="nested-columns">
-          <h4>Nested Column 1</h4>
-          <h4>Nested Column 2</h4>
-          <h4>Nested Column 3</h4>
-        </header>
-      </header>
-    </section>
-    <section class="column-content">
-      <header class="padded-area">
-        <h2>Column 2 of 2</h2>
-        <header class="nested-columns">
-          <h4>Nested Column 1</h4>
-          <h4>Nested Column 2</h4>
-          <h4>Nested Column 3</h4>
-        </header>
-      </header>
-    </section>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </section>
+    </div>
+    <div class="columns">
+      <section id="column-content">
+        <h1>Column 1 of 2</h1>
+        <section class="nested-columns">
+          <h3>Nested Column</h3>
+          <h3>Nested Column</h3>
+          <h3>Nested Column</h3>
+        </section>
+        <h1>Column 2 of 2</h1>
+        <section class="nested-columns">
+          <h3>Nested Column</h3>
+          <h3>Nested Column</h3>
+          <h3>Nested Column</h3>
+        </section>
+      </section>
+    </div>
     <section class="pic-content">
       <!-- include three pictures here -->
-      <img src="images/dog1.jpeg" id="pic-sizing">
-      <img src="images/dog2.jpeg" id="pic-sizing">
-      <img src="images/dog3.jpeg" id="pic-sizing">
+      <img src="https://place-hold.it/320x100" id="pic-sizing">
+      <img src="https://place-hold.it/320x100" id="pic-sizing">
+      <img src="https://place-hold.it/320x100" id="pic-sizing">
     </section>
   </main>
 
   <footer id="main-footer" class="padded-area">
     <h1>Footer</h1>
-    <p>Copyright</p>
-    <p>123 Anything Street, Columbia, SC</p>
+    <h5>Copywrite</h5>
+    <p>123 Anything Street</p>
+    <p>Columbia, SC</p>
   </footer>
 </body>
 
