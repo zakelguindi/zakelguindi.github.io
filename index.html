@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Zak Elguindi 242 Assignments Page</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div id="content">
-      <h1>CSCE 242 Class Page- Zak Elguindi</h1>
-      <p>CSCE 242 is a web-dev class aimed at helping students learn different web applications. Primary languages will be html and javascript. This will be a page that I use to host all of my assignments on.</p>
-      <h2>242 Assignments</h2>
-      <ul>
-        <li><a id="links" href="csce242/assignments/assignment1/basichtml.html">Assignment 1</a></li>
-        <li><a id="links" href="csce242/assignments/assignment2/index.html">Assignment 2</a></li>
-        <li><a id="links" href="csce242/assignments/assignment3/index.html">Assignment 3</a></li>
-        <li><a id="links" href="csce242/assignments/assignment4/index.html">Assignment 4</li>
-      </ul>
-      <!-- <a href="csce242/assignments/assignment1/basichtml.html">Assignment 1</a>
-      <a href="csce242/assignments/assignment2/index.html">Assignment 2</a> -->
-  </body>
-</html>
+  
+<head>
+  <title>Zak Elguindi 242 Assignments Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header-content">
+    <div id="flex-container">
+      <h3 id="name-id">Zak Elguindi</h3>
+    </div>
+    <h1 id="header-id">CSCE 242: Client-Server Computing</h1>
+  </header>
 
-<!-- Change the default font of the page to something more appealing
-Change the color scheme, recoloring all the text, and making sure it matches nicely.  Don't just pick one color.
-Add a background color or image (Which makes sense), then
-Add a formatted div, which allows the page content to be easily viewed.
-Remove the underline on the links to each assignment
-Recolor the links of each assignment so they are not the default blue.
-Make sure to use Id's
-Make sure all your colors match, and your theme looks nice. -->
+  <main>
+    <h2 id="assignments-id">Assignments</h2>
+    <div id="flex-container">
+      <section id="assignment">
+        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment1/basichtml.html">Assignment 1 - Basic HTML</a></h3>
+        <img id="img-id" src="images/Screen Shot 2023-09-09 at 12.53.42 PM.png" width=300px height=150px>
+        <p id="description-id">Lorem Ipsum Whatever</p>
+      </section>
+      <section id="assignment">
+        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment2/index.html">Assignment 2 - Basic CSS</a></h3>
+        <img id="img-id" src="images/Screen Shot 2023-09-09 at 12.53.54 PM.png" width=300px height=150px>
+        <p id="description-id">Lorem Ipsum Whatever</p>
+      </section>
+      <section id="assignment">
+        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment3/index.html"> Assignment 3 - Page Layout</a></h3>
+        <img id="img-id" src="images/Screen Shot 2023-09-09 at 12.54.02 PM.png" width=300px height=150px>
+        <p id="description-id">Lorem Ipsum Whatever</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
