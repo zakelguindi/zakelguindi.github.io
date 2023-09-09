@@ -3,17 +3,63 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* text-decoration: none; */
   /* color: #73030D; */
-  background-color: #D20012;
+  background-color: white;
+  color: black; 
   /* color: #038C73; */
 }
 
-#content {
-  background:aliceblue;
-  color: #D20012;
-  width: 75%;
+#header-content, #assignments-id {
+  /*header */
+  margin: auto;  
+  width: 80%; 
+  padding: 5px; 
 }
 
-#links {
-  text-decoration: none;
-  color:#038C73;
+#flex-container {
+  /* for name-id div, assignments div */
+  display: flex; 
+  text-align: center;
+  justify-content: space-between;
+}
+
+#name-id {
+  /*name id*/
+}
+
+#header-id {
+  /* H1 */ 
+  text-align: center; 
+}
+
+#assignments-id {
+  /*Assignments block*/ 
+  text-align: center; 
+}
+
+#assignment {
+  /* individual assignment*/
+  background: lightblue;
+  text-align: center; 
+  margin: 5px; 
+  border: 15px solid lightblue; 
+}
+
+#assignment-no {
+  /*Assignment # block */
+}
+
+#img-id {
+  /*image block*/
+  /* width:50%; 
+  height:25%;  */
+}
+
+#description-id {
+  /*paragraph block */ 
+}
+
+@media only screen and (max-width: 760px) {
+  #flex-container {
+    display: inline; 
+  }
 }
