@@ -1,0 +1,154 @@
+
+#header {
+  background-color: black;
+  color: white; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+  margin: auto; 
+
+}
+
+#nav-gateways, #nav-gateways ul, #nav-gateways li {
+  display: flex;
+  justify-content: right;
+}
+
+#nav-gateways li {
+  list-style-type: none;
+  margin: 0 5px; 
+}
+
+#nav-gateways ul, #nav-gateways li {
+  padding-left: 0px;
+}
+
+#nav-gateways a, #nav-gateways a:visited,
+#nav-main a, #third-body a, #fourth-body a,
+#fifth-body a, #sixth-body a, #seventh-body a,
+#eighth-body a, #ninth-body a, #tenth-body a, 
+#footer-content a, #col2 a {
+  text-decoration: none;
+  color: white; 
+  border: 5px solid maroon; 
+}
+
+#nav-gateways a, #nav-gateways a:visited, 
+#nav-main a {
+  border: none; 
+}
+
+#top-logo-section,
+#second-body,
+#third-body, #fourth-body, 
+#fifth-body, #sixth-body,
+#seventh-body, #eighth-body,
+#tenth-body, #footer-content, 
+#col2{
+  display: flex; 
+}
+#top-logo-section{
+  justify-content: space-between;
+}
+
+#nav-main ul{
+  background-color: maroon;
+  display: flex; 
+  list-style-type: none;
+  padding: 0 5px; 
+  justify-content: space-between;
+}
+
+#first-body, #subheader{
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 5px solid white;
+}
+#first-body h2, #first-body p{
+  padding: 20px;
+}
+#first-body h2, #second-body,
+#sixth-body, #ninth-body{
+  background-color: maroon;
+  color: white
+}
+
+#subheader {
+  font:bold;
+}
+
+#second-body, #third-body {
+  padding: 5px; 
+  text-align:justify; 
+}
+
+#third-body {
+  background-color: black;
+  color: white; 
+}
+
+#fourth-body {
+color: black; 
+background-color: lightgrey;
+justify-content: justify; 
+}
+
+#fourth-body h3, #fifth-body h3 {
+  color: maroon; 
+}
+
+#fourth-body a{
+  color: black;
+}
+
+#seventh-body a, #tenth-body a{
+  color: maroon; 
+}
+
+#fifth-body {
+  display: inline; 
+  color: maroon; 
+}
+
+#fifth-body h3 {
+  text-align: center;
+}
+
+#research-spotlight {
+  display: flex; 
+  margin: auto; 
+}
+
+#sixth-body {
+  text-align: justify; 
+  margin: auto; 
+}
+
+#seventh-body {
+  background-color: white;
+  color: maroon;
+}
+
+#eighth-body {
+  background-color: navy;
+  color: white; 
+}
+
+
+
+
+
+#footer {
+  background-color: maroon;
+  color: white; 
+  margin: auto; 
+  border: 50px solid maroon; 
+  text-align:left;
+}
+
+#footer-content, #col2 {
+  justify-content:center;
+}
+#footer-content li, #col2 li {
+  text-decoration: none;
+  padding: 5px; 
+}
