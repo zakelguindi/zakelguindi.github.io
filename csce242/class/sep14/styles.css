@@ -1,0 +1,46 @@
+/* structure */
+
+body {
+  background-color: antiquewhite;
+}
+
+/* Animation */ 
+#square-setup {
+  background-color: cornflowerblue;
+  width:100px; 
+  height:100px; 
+  text-align: center; /* centers text horizontally  */
+  line-height: 100px; /* centers text vertically */ 
+}
+.square {
+  position: relative; /* if position isn't relative you can't animate. need this to move */ 
+  top: 100px; /*moves 100px from where it was */ 
+  animation-name: anim-square; /* calling anim-square */ 
+  animation-duration: 1s; 
+  animation-iteration-count: 3; /* how many times does it run */ 
+}
+
+/* square animation */
+@keyframes anim-square {
+  /* at 0%, do this */
+  0% {
+    background-color: cornflowerblue;
+    opacity: 1;
+    top: 0px; /*moves it to top */ 
+  }
+  50% {
+    background-color: green;
+    opacity: 0; /*makes it clear/invisible*/ 
+    top: 100px; /* moves it back to bottom */ 
+  }
+  100% {
+    background-color: red;
+    opacity: 1; /*makes it not clear*/ 
+    top: 0px; /*moves it back to top */ 
+  }
+}
+
+/*Typography */ 
+
+
+/* Media Query */ 

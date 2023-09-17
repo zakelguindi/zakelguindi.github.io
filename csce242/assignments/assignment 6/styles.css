@@ -1,0 +1,92 @@
+/*structure */
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px; 
+}
+
+#top-header, #footer {
+  background-color: peachpuff;
+  border: 25px solid peachpuff;
+}
+.hide {
+  display: none; 
+}
+
+#top-header {
+  text-align: center; 
+}
+
+.column-header {
+  text-align: center; 
+}
+
+.body-column-layout {
+  background-color: lightblue;
+  width: 100%; 
+  height:auto;
+  border: 5px solid cornflowerblue; 
+}
+
+#comment-layout {
+  background-color: tan;
+}
+
+#comment-header {
+  color: royalblue;
+}
+
+.padding-area {
+  padding: 0 5px; 
+}
+
+/*Animation */ 
+
+
+
+.thumbsupanimation {
+  position: relative; 
+  animation-name: anim-thumbs; 
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
+
+/*thumbs up animation */ 
+@keyframes anim-thumbs {
+  50% {
+    width:150%;
+  }
+  100% {
+    width:100%;
+  }
+}
+
+
+/*Typography */ 
+
+#footer {
+  text-align: center; 
+}
+
+/*Media Query */ 
+@media only screen and (min-width: 760px) {
+
+  #content-main {
+    display: flex; 
+  }
+  .hide {
+    display: none; 
+  }
+
+  .body-column-layout {
+    padding: 10px;
+  }
+
+  
+
+  #column3 {
+    spacing: 5px;
+  }
+
+  
+}
