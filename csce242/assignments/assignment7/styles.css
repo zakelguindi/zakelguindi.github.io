@@ -1,0 +1,129 @@
+/* color gradient stuff */
+:root {
+  --primary: coral; 
+  --secondary: white; 
+  --tertiary: black; 
+  --num: 20%; 
+}
+
+/* structure */
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--secondary); 
+}
+
+/* navigation */
+#nav-main ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+#main-header h1 {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 10px; 
+  margin: auto; 
+}
+
+#nav-main li {
+  background-color: var(--secondary);
+  padding: 10px; 
+  margin: 4px 0;
+  text-align: center;
+}
+
+#nav-main a {
+  text-decoration: none;
+  color: var(--primary); 
+}
+
+#main-content {
+  background-color: var(--primary);
+  margin: 0 150px; 
+}
+
+#whostheoldest, #fundraising {
+  padding: 10px; 
+  border: 5px solid var(--secondary); 
+}
+
+#ex1content {
+  /* display: inline;  */
+  padding: 5px;  
+}
+
+#ex1content label{
+  padding-left: 20px; 
+}
+
+#ex1content label, input {
+  margin: 5px;
+}
+
+/* nav bar toggle */
+#nav-toggle div{
+  width: 40px; 
+  height: 10px; 
+  background-color: var(--primary);
+  margin: 5px 0; 
+}
+
+/* gradients */
+#displayblock {
+  width:100px; 
+  height:400px;
+  background-color: white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colorin {
+  --x: 50px;
+  background-color: (red);
+}
+
+#displayblock.fillgradient {
+  background: linear-gradient(0deg, red var(--num), var(--secondary) var(--num) 100%);
+  /* it isn't updating. having issues calling it in JS class */
+}
+
+
+/* typography */
+#exercise-headers {
+  font-size: 1.5em;
+}
+
+.hide {
+  display: none; 
+}
+
+.show {
+  display: inline; 
+}
+
+/* larger resolutions */
+@media (min-width:900px) {
+  body {
+    
+  }
+  #exercise-headers {
+    display: flex; 
+  }
+  #exercise-headers li {
+    flex: 1;
+  }
+
+  /* only hover on large resolutions */
+  #exercise-headers a:hover {
+    border-bottom: 5px solid var(--primary); 
+  }
+
+  #exercise-headers a {
+    border-bottom: 2px solid transparent; 
+  }
+
+  #nav-toggle {
+    display: none;
+  }
+}

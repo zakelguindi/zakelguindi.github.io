@@ -37,10 +37,14 @@ const buttonclick = () => {
   document.getElementById("square-setup").classList.add("square");
 
 }
+const colorIn = () => {
+  document.getElementById("square").classList.add("rainbow"); 
+}
 
 window.onload = () => {
   document.getElementById("button").onclick = buttonclick; /*you only get one function for the onclick */ 
   document.getElementById("button-show-name").onclick = displayName; 
+  document.getElementById("button-gradient").onclick = colorIn; 
 }
 
 //why they need to be constant

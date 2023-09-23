@@ -4,32 +4,40 @@ body {
   background-color: antiquewhite;
 }
 
+
+/* Form */
+label {
+  width: 100px; 
+  text-align: right;
+  padding: 5px;
+}
+
+label, input {
+  display: block;
+}
+
+.columns {
+  margin: auto;
+}
+
+#result section{
+  border: 4px solid pink;
+}
+
 /* Animation */ 
-#square-setup {
+#square {
   background-color: cornflowerblue;
   width:100px; 
   height:100px; 
   text-align: center; /* centers text horizontally  */
   line-height: 100px; /* centers text vertically */ 
 }
-.square {
+.move-square {
   position: relative; /* if position isn't relative you can't animate. need this to move */ 
   top: 100px; /*moves 100px from where it was */ 
   animation-name: anim-square; /* calling anim-square */ 
   animation-duration: 1s; 
   animation-iteration-count: 3; /* how many times does it run */ 
-}
-
-#square.rainbow { /* this lets you change the rainbow class for Square */
-  background-color: linear-gradient(0deg, red, orange, yellow, green, blue); /* id's have priority over class */
-  background: linear-gradient(180deg, pink var(--num), skyblue var(--num) 100%);
-}
-
-:root {
-  /* use this for the homework- set a variable and use line 67 to change it */
-  --primary: coral; 
-  --secondary: white; 
-  --num: 60%; 
 }
 
 /* square animation */

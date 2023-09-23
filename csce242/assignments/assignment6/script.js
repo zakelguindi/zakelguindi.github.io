@@ -30,9 +30,9 @@ const commentbuttonclick = () => {
   const commentname = document.getElementById("txt-comment-name").value;
   const ratingname = document.getElementById("txt-rating-name").value;
   const username = document.getElementById("txt-user-name").value;
-  document.getElementById("comment-header").innerHTML = productname;
-  document.getElementById("comment-section").innerHTML = ratingname+"/5 stars. "+commentname;
-  document.getElementById("nametag").innerHTML = "by "+username;
+  document.getElementById("comment-header").innerHTML += <section class="comment"> "new comment " + productname </section>;
+  document.getElementById("comment-section").innerHTML += ratingname+"/5 stars. "+commentname;
+  document.getElementById("nametag").innerHTML += "by "+username;
 }
 
 

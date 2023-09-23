@@ -1,0 +1,103 @@
+/* Structure */ 
+
+body {
+  background-color: azure;
+}
+
+#main-header {
+  background-color:antiquewhite;
+}
+
+#main-content {
+  background-color: cadetblue;
+}
+
+#main-footer {
+  background-color: dodgerblue;
+}
+
+.padded-area {
+  padding: 5px;
+  margin: auto;
+}
+
+.info {
+  border: 2px solid blueviolet; 
+  background: lightblue; 
+}
+
+.info header {
+  background-color: blueviolet; 
+  margin: 0 auto;
+}
+
+/* Main Navigation */
+#main-nav ul {
+  padding-left: 0px; 
+}
+
+
+#main-nav a {
+  text-decoration: none;
+  color: black; 
+}
+
+#main-nav a:hover {
+  border-bottom: 1px solid magenta; 
+}
+
+/* Typography */ 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hide {
+  display: none; 
+}
+
+#hamburger div {
+  width: 35px; 
+  height: 5px; 
+  background-color: black;
+  margin: 6px 0; 
+}
+
+/* color-gradient stuff */
+#square.rainbow { /* this lets you change the rainbow class for Square */
+  background-color: linear-gradient(0deg, red, orange, yellow, green, blue); /* id's have priority over class */
+  background: linear-gradient(180deg, pink var(--num), skyblue var(--num) 100%);
+}
+
+:root {
+  /* use this for the homework- set a variable and use line 67 to change it */
+  --primary: coral; 
+  --secondary: white; 
+  --num: 60%; 
+}
+
+
+/* .hide-small {
+  display: none;
+} */
+
+
+/* Larger Resolutions */
+@media only screen and (min-width:600px) { /*when width > 600px */
+  #main-nav li {
+    /* list-style-type: none; */
+    display: inline-block;
+    margin: auto; 
+  }
+  .columns {
+    display: flex; 
+  }
+  .collof2 {
+    flex: 1;
+  }
+  #hamburger {
+    display: inline; 
+  }
+  /* .hide-small {
+    display: block;
+  } */
+
+}
