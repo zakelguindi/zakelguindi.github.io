@@ -2,12 +2,7 @@
 
 const manbuttonclick = () => {
   let count = 0;
-  const interval = setInterval(() =>  {
-    
-
-
-
-  }, 500); 
+  document.getElementById("manpic").classList.add("manAnimation");
 }
 
 var y = document.querySelector(':root'); 
@@ -15,20 +10,19 @@ const colorBar = () => {
   document.getElementById("displayblock").classList.toggle("hide");
   x = (document.getElementById("funds-raised-txt").value)/100;
   // document.getElementById("displayblock").style.setProperty("--x", x*4+"px");
-  if(x > 0 && x <= 25) {
-    //25%
-    y.style.setProperty("--num", 25+"%");
-  } else if(x > 25 && x <= 50) {
-    //50%
-    y.style.setProperty("--num", 50+"%");
-  } else if(x > 50 && x <= 75) {
-    //75%
-    y.style.setProperty("--num", 75+"%");
-    console.log("here"); 
-  } else if(x > 75 && x <= 100) {
-    //100%
-    y.style.setProperty("--num", 100+"%");
-  }
+  // y.style.setProperty("--num", x+"%"); 
+
+  let i = 0; 
+  const fill = setInterval(() => { 
+
+    //works
+    if(i <= x) {
+      y.style.setProperty("--num", i+"%");
+      i++; 
+    }
+  }, 20);
+
+
   console.log("X: "+x); 
   document.getElementById("displayblock").classList.add("fillgradient");
 }

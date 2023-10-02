@@ -14,7 +14,7 @@ const showbuttonclick = () => {
 }
 
 const hidebuttonclick = () => {
-  document.getElementById("column1-img").classList.add('hide');
+  document.getElementById("column1-img").classList.add("hide");
 }
 
 const danceclick = () => {

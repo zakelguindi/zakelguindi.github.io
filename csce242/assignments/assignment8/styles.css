@@ -26,6 +26,18 @@ body {
   display: none; 
 }
 
+.manAnimation {
+  position:relative; 
+  animation-name: anim-man; 
+  animation-duration: 10s; 
+}
+
+@keyframes anim-man {
+  --num {
+    right: 1px; 
+  }
+}
+
 /* fundraising */
 #displayblock {
   width:100px; 
