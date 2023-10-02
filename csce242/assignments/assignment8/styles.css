@@ -5,6 +5,7 @@
   --secondary: rgb(2, 203, 230); 
   --tertiary: white; 
   --num: 0%; 
+  
 }
 
 body {
@@ -22,19 +23,24 @@ body {
   border: none; 
 }
 
+#manpic {
+  width: 30%;
+}
+
 .hide {
   display: none; 
 }
 
 .manAnimation {
   position:relative; 
+  left: 0%;
   animation-name: anim-man; 
   animation-duration: 10s; 
 }
 
 @keyframes anim-man {
-  --num {
-    right: 1px; 
+  100% {
+    left: 200%; 
   }
 }
 
