@@ -1,0 +1,62 @@
+/* Structure  */
+
+:root {
+  --primary: black; 
+  --secondary: rgb(2, 203, 230); 
+  --tertiary: white; 
+  --num: 0%; 
+}
+
+body {
+  background-color: var(--primary);
+}
+
+#runningmandiv, #fundraising, #manbutton {
+  background-color: var(--secondary); 
+}
+
+
+/* moving pic */
+#manpic, #manbutton {
+  width: 30%;
+  border: none; 
+}
+
+.hide {
+  display: none; 
+}
+
+/* fundraising */
+#displayblock {
+  width:100px; 
+  height:400px;
+  background-color: white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#displayblock.fillgradient {
+  background: linear-gradient(0deg, red var(--num), var(--tertiary) var(--num) 100%);
+  /* it isn't updating. having issues calling it in JS class */
+}
+
+
+/* formatting */
+
+#runningmandiv h1 {
+  text-align: center;
+}
+
+@media only screen and (min-width: 760px) {
+  body {
+    display: flex; 
+    margin: auto; 
+    border: 5px solid; 
+  }
+
+  #runningmandiv, #fundraising {
+    border: 5px solid black; 
+    padding: 5px; 
+  }
+}

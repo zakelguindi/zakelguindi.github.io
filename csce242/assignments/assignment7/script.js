@@ -1,6 +1,5 @@
 
 
-
 const togglenav = () => {
   document.getElementById("exercise-headers").classList.toggle("hide"); //toggles between hidden and show 
 }
