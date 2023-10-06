@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script-about.js"></script>
+  </head>
+
+  <body>
+    <header id="main-header" class="padded-area">
+      <h1>My Main Heading</h1>
+      <nav id="main-nav">
+        <div id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul id="nav-items" class="hide-small">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pictures.html">Pictures</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="">
+      <section id="slideshow-about">
+        <div id="preview">
+          <img src="images/strawberry.png" width=25% height=50%/>
+          <img src="images/cherry.jpeg" width=25% height=50% class="hidden" />
+          <img src="images/grape.jpeg" width=25% height=50% class="hidden" />
+          <img src="images/mango.jpeg" width=25% height=50% class="hidden" />
+          <img src="images/apple.jpeg" width=25% height=50% class="hidden" />
+        </div>
+        <div id="thumbs">
+          <img src="images/strawberry.png" class="small" />
+          <img src="images/cherry.jpeg" class="small"/>
+          <img src="images/grape.jpeg" class="small"/>
+          <img src="images/mango.jpeg" class="small"/>
+          <img src="images/apple.jpeg" class="small"/>
+        </div>
+        <p id="forward-arrow">&gt;</p>
+        <p id="backward-arrow">&lt;</p>
+      </section>
+    </main>
+
+    <footer id="main-footer" class="padded-area">
+      <p>Goodbye</p>
+    </footer>
+  </body>
+</html>

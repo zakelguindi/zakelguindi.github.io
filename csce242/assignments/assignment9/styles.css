@@ -1,0 +1,63 @@
+/* Structure */
+:root {
+  --primary: black; 
+  --secondary: rgba(16, 162, 229, 0.863);
+  --text: black; 
+}
+
+body {
+  background-color: var(--primary);
+  display: flex; 
+  flex: 1; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.columnMargin {
+  margin: auto; 
+  padding: 15px; 
+}
+
+h1 {
+  text-align: center; 
+}
+
+#quotes {
+  text-align: center;
+}
+
+#quotesdiv, #rainbowdiv {
+  width: 40%; 
+  position: relative;
+}
+
+#rainbow {
+  position: relative; 
+}
+
+#quotesdiv, #rainbowdiv {
+  background-color: var(--secondary);
+  color: var(--text);
+  border: 5px black solid; 
+}
+
+.hidden {
+  display: none; 
+}
+
+.box {
+  width: 90%; 
+  height: 20px; 
+  background-color: black;
+  padding: 0px; 
+  margin: 0px; 
+}
+
+#goldpot {
+  position: absolute; 
+  width: 20%; 
+  height: 50%; 
+  right: 15%; 
+  top: 60px; 
+  /* left: 20px;  */
+  
+}

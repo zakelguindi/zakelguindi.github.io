@@ -42,6 +42,7 @@ body {
   margin: 0 auto;
 }
 
+
 /* Square and Gradients */
 
 #square {
@@ -52,17 +53,10 @@ body {
 }
 
 #square.rainbow {
-  background: linear-gradient(
-    90deg,
-    red 15%,
-    orange 15% 30%,
-    yellow 30% 45%,
-    blue 60%,
-    indigo 75%,
-    violet 100%
-  );
+  background: linear-gradient( 90deg, red 15%, orange 15% 30%, yellow 30% 45%, blue 60%, indigo 75%, violet 100%);
   background: linear-gradient(180deg, pink var(--num), skyblue var(--num) 100%);
 }
+
 
 /* Main Navigation */
 
@@ -86,6 +80,7 @@ body {
   background-color: lightblue;
 }
 
+
 /* Form */
 
 label,
@@ -108,7 +103,9 @@ label {
   color: red;
 }
 
+
 /* gallery */
+
 .items section {
   margin: 1%;
   padding: 1%;
@@ -121,22 +118,22 @@ label {
   opacity: 100%;
 }
 
-/* table */
 
-tr {
-  border: 6px solid white; 
-  border-collapse: collapse; 
-  /* background-color: red; */
+/* Table */
+
+table {
+  border-collapse: collapse;
 }
 
-img {
-  width: 20%; 
-  height: 20%; 
+tr {
+  border: 1px solid black;
+  padding: 5px;
 }
 
 .special {
-  color: magenta; 
+  color: magenta;
 }
+
 
 /* Typography */
 
@@ -163,7 +160,9 @@ h1 {
   display: none;
 }
 
+
 /* Slideshow */
+
 #slideshow {
   background: white;
   width: 100%;
@@ -176,58 +175,58 @@ h1 {
 }
 
 .slideHide {
-  animation-name: slideOut; 
+  animation-name: slideOut;
   animation-duration: .5s;
 }
 
 @keyframes slideOut {
   from {
-    opacity: 1; 
+      opacity: 1;
   }
   to {
-    opacity: 0; 
+      opacity: 0;
   }
 }
 
 @keyframes slideIn {
   from {
-    opacity: 1; 
+      opacity: 0;
   }
   to {
-    opacity: 0; 
+      opacity: 1;
   }
 }
+
 
 /* Larger Resolutions */
 
 @media only screen and (min-width: 600px) {
   #main-nav li {
-    display: inline-block;
+      display: inline-block;
   }
   .columns {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: right;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: right;
   }
-
   #hamburger {
-    display: none;
+      display: none;
   }
   .hide-small {
-    display: block;
+      display: block;
   }
   #main-nav a:hover {
-    border-bottom: 1px solid magenta;
+      border-bottom: 1px solid magenta;
   }
   #main-nav li {
-    background: none;
-    border: none;
+      background: none;
+      border: none;
   }
   #main-nav li:hover {
-    background: none;
+      background: none;
   }
   .items section {
-    flex: 20%;
-    flex-grow: 0;
+      flex: 20%;
+      flex-grow: 0;
   }
 }
