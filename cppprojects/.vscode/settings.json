@@ -58,6 +58,11 @@
     "deque": "cpp",
     "filesystem": "cpp",
     "fstream": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "array": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp"
   }
 }
