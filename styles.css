@@ -4,13 +4,9 @@
 }
 
 body {
-  /* background-color:papayawhip; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* text-decoration: none; */
-  /* color: #73030D; */
   background-color: var(--background);
   color: var(--textcolor)
-  /* color: #038C73; */
 }
 
 #header-content, #assignments-id {
