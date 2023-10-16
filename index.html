@@ -4,6 +4,7 @@
 <head>
   <title>Zak Elguindi 242 Assignments Page</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header id="header-content">
@@ -15,62 +16,72 @@
   <!-- end header section -->
 
   <main>
+
     <h2 id="assignments-id">Assignments</h2>
-    <div id="flex-container">
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment1/basichtml.html">Assignment 1 - Basic HTML</a></h3>
-        <a id="links" href="csce242/assignments/assignment1/basichtml.html"><img id="img-id" src="images/Screen Shot 2023-09-09 at 12.53.42 PM.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #1- first home page that briefly describes the history of soccer</p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment2/index.html">Assignment 2 - Basic CSS</a></h3>
-        <a id="links" href="csce242/assignments/assignment2/index.html"><img id="img-id" src="images/Screen Shot 2023-09-09 at 12.53.54 PM.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #2- second page that describes the history of my favorite soccer team</p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment3/index.html"> Assignment 3 - Page Layout</a></h3>
-        <a id="links" href="csce242/assignments/assignment3/index.html"><img id="img-id" src="images/Screen Shot 2023-09-09 at 12.54.02 PM.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #3- third page that replicates a page assiged to us</p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment5/index.html"> Assignment 5 - Page Layout</a></h3>
-        <a id="links" href="csce242/assignments/assignment5/index.html"><img id="img-id" src="images/assignment4.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #5- remaking a USC webpage on html using css and flexbox</p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment6/index.html"> Assignment 6 - JavaScript, Buttons, Functions, and more</a></h3>
-        <a id="links" href="csce242/assignments/assignment6/index.html"><img id="img-id" src="images/assignment6.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #6- remaking a diagram that shows and hides an image, animates an image, and creates comments from a given input</p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment7/index.html"> Assignment 7- Conditionals</a></h3>
-        <a id="links" href="csce242/assignments/assignment7/index.html"><img id="img-id" src="images/assignment7.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #7- had to make a website that had two exercises. First exercise took an input of three names and ages and gave an output of
-          all names in order of oldest to youngest. Second exercise had a meter that would fill up based on how close the funds raised were to the $10,000 goal.
-        </p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment8/index.html"> Assignment 8- Loops</a></h3>
-        <a id="links" href="csce242/assignments/assignment8/index.html"><img id="img-id" src="images/assignment8.png" width=300px height=150px></a>
-        <p id="description-id">Assignment #8- had to take the previous fundraising bar from Assignment 7 and make it so that it'd fill 
-          the exact number instead of an increment. Also had to make a figure move across the screen and shift the border with it. 
-        </p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment9/index.html"> Assignment 9 - Arrays</a></h3>
-        <a id="links" href="csce242/assignments/assignment9/index.html"><img id="img-id" src="images/assignment9.png" width=300px height=150px></a>
-        <p id="description-id"> Assignment 9- In this assignment, I had to make a project that would display a quote from an array of quotes and have it cycle every two seconds. I also 
-          had a rainbow section that would draw a rainbow line by line and show a pot of gold once it was completed. 
-        </p>
-      </section>
-      <section id="assignment">
-        <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment10/index.html"> Assignment 10 - Classes</a></h3>
-        <a id="links" href="csce242/assignments/assignment10/index.html"><img id="img-id" src="images/assignment10.png" width=300px height=150px></a>
-        <p id="description-id"> Assignment 10- In this assignment, I had to make a list of toys that would show a picture of a toy, and then the price, 
-          age range, and rating of the toy when hovered upon. I made this using classes, so it's easy to add new toys with this functionality. 
-        </p>
-      </section>
+    <div id="assignmentslist" class="hide">
+      <div id="flex-container">
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment1/basichtml.html">Assignment 1 - Basic HTML</a></h3>
+          <a id="links" href="csce242/assignments/assignment1/basichtml.html"><img id="img-id" src="images/Screen Shot 2023-09-09 at 12.53.42 PM.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #1- first home page that briefly describes the history of soccer</p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment2/index.html">Assignment 2 - Basic CSS</a></h3>
+          <a id="links" href="csce242/assignments/assignment2/index.html"><img id="img-id" src="images/Screen Shot 2023-09-09 at 12.53.54 PM.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #2- second page that describes the history of my favorite soccer team</p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment3/index.html"> Assignment 3 - Page Layout</a></h3>
+          <a id="links" href="csce242/assignments/assignment3/index.html"><img id="img-id" src="images/Screen Shot 2023-09-09 at 12.54.02 PM.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #3- third page that replicates a page assiged to us</p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment5/index.html"> Assignment 5 - Page Layout</a></h3>
+          <a id="links" href="csce242/assignments/assignment5/index.html"><img id="img-id" src="images/assignment4.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #5- remaking a USC webpage on html using css and flexbox</p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment6/index.html"> Assignment 6 - JavaScript, Buttons, Functions, and more</a></h3>
+          <a id="links" href="csce242/assignments/assignment6/index.html"><img id="img-id" src="images/assignment6.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #6- remaking a diagram that shows and hides an image, animates an image, and creates comments from a given input</p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment7/index.html"> Assignment 7- Conditionals</a></h3>
+          <a id="links" href="csce242/assignments/assignment7/index.html"><img id="img-id" src="images/assignment7.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #7- had to make a website that had two exercises. First exercise took an input of three names and ages and gave an output of
+            all names in order of oldest to youngest. Second exercise had a meter that would fill up based on how close the funds raised were to the $10,000 goal.
+          </p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment8/index.html"> Assignment 8- Loops</a></h3>
+          <a id="links" href="csce242/assignments/assignment8/index.html"><img id="img-id" src="images/assignment8.png" width=300px height=150px></a>
+          <p id="description-id">Assignment #8- had to take the previous fundraising bar from Assignment 7 and make it so that it'd fill 
+            the exact number instead of an increment. Also had to make a figure move across the screen and shift the border with it. 
+          </p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment9/index.html"> Assignment 9 - Arrays</a></h3>
+          <a id="links" href="csce242/assignments/assignment9/index.html"><img id="img-id" src="images/assignment9.png" width=300px height=150px></a>
+          <p id="description-id"> Assignment 9- In this assignment, I had to make a project that would display a quote from an array of quotes and have it cycle every two seconds. I also 
+            had a rainbow section that would draw a rainbow line by line and show a pot of gold once it was completed. 
+          </p>
+        </section>
+        <section id="assignment">
+          <h3 id="assignment-no"><a id="links" href="csce242/assignments/assignment10/index.html"> Assignment 10 - Classes</a></h3>
+          <a id="links" href="csce242/assignments/assignment10/index.html"><img id="img-id" src="images/assignment10.png" width=300px height=150px></a>
+          <p id="description-id"> Assignment 10- In this assignment, I had to make a list of toys that would show a picture of a toy, and then the price, 
+            age range, and rating of the toy when hovered upon. I made this using classes, so it's easy to add new toys with this functionality. 
+          </p>
+        </section>
+      </div>
     </div>
+    <h2 id="projects-header">Class Project</h2>
+    <ul id="projectslist" class = "hide">
+      <!-- make HREFs for idea, wireframe, part1 -->
+      <li><a href="csce242/zakelguindiprojects/proposal/242 Project Proposal Pt 1.pdf">Project Idea</a></li>
+      <li><a href="csce242/zakelguindiprojects/wireframe/admin create project.pdf">wireframe</a></li>
+      <li><a href="file:///Users/zakelguindi/zakelguindi.github.io/csce242/zakelguindiprojects/part1/home.html">Part 1: HTML and CSS</a></li>
+    </ul>
   </main>
 </body>
 </html>

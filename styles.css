@@ -1,10 +1,15 @@
+:root {
+  --background: #0A1828; 
+  --textcolor: #BFA181; 
+}
+
 body {
   /* background-color:papayawhip; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* text-decoration: none; */
   /* color: #73030D; */
-  background-color: white;
-  color: black; 
+  background-color: var(--background);
+  color: var(--textcolor)
   /* color: #038C73; */
 }
 
@@ -31,17 +36,19 @@ body {
   text-align: center; 
 }
 
-#assignments-id {
+#assignments-id, 
+#projects-header{
   /*Assignments block*/ 
   text-align: center; 
+  text-decoration: underline;
 }
 
 #assignment {
   /* individual assignment*/
-  background: lightblue;
+  background: var(--background);
   text-align: center; 
   margin: 5px; 
-  border: 15px solid lightblue; 
+  border: 15px solid var(--textcolor); 
   width:30%; 
   height:20%;
 }
@@ -56,8 +63,28 @@ body {
   height:120px; 
 }
 
-#description-id {
-  /*paragraph block */ 
+a {
+  text-decoration: underline;
+  color:#BFA181;
+}
+
+#projectslist li{
+  /* display:;  */
+  text-align: center;
+  list-style-type: none;
+  /* text-decoration: none; */
+  padding: 10px; 
+  margin: auto; 
+}
+
+#projectslist a {
+  text-decoration: none;
+  border: 5px solid var(--textcolor);
+}
+
+
+.hide {
+  display: none; 
 }
 
 @media only screen and (min-width: 800px) {
