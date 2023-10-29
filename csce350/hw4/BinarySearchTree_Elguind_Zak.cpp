@@ -15,6 +15,8 @@
 #include<string>
 #include<algorithm>
 #include<stack>
+#include<queue>
+using std::queue; 
 using std::stack; 
 using std::max; 
 using std::cin; 
@@ -39,13 +41,15 @@ class Node {
     
 };
 
+
+
 bool Search(Node* root, int value) {
   // cout << "Searching for " << value << ": "; 
   Node* thisNode = root; 
   while(thisNode != NULL) {
     cout << thisNode->number << " --> ";
     if(thisNode->number == value) {
-      // cout << " - FOUND" << endl; 
+      cout << " - NUMBER FOUND" << endl; 
       return true; 
     } else if(thisNode->number > value) {
       //on left side
@@ -53,15 +57,22 @@ bool Search(Node* root, int value) {
     } else if(thisNode->number < value) {
       thisNode = thisNode->rightChild; 
     } else {
+      // cout << "Here" << endl; 
+      return false; 
     }
   }
-  cout << "Number not found" << endl; 
+  // cout << "Number not found" << endl; 
   return false; 
 };
 
 bool PrintSearch(Node* root, int value) {
   cout << "Searching for " << value <<": "; 
-  return Search(root, value); 
+  if(Search(root, value) == true) {
+    return true; 
+  } else {
+    cout << "Number not found" << endl; 
+    return false; 
+  }
 }
 
 
@@ -227,83 +238,57 @@ void RemoveThis(Node* root, int key) {
   // root = Remove(root, key); 
 };
 
+int homeMessage() {
+  int number = 0; 
+  cout << "Press 1 to insert a node" << endl << "Press 2 to remove a node" << endl << "Press 3 to Search for a node" << endl << "Press 4 to find the minimum value" << endl << "Press 5 to find the maximum value" << endl << "Press 9 to stop" << endl; 
+  cin >> number; 
+  return number; 
+};
 
 int main() {
+  
+  int rootVal = 0; 
+  cout << "Enter the first node of your tree" << endl; 
+  cin >> rootVal; 
+  Node* root = new Node(rootVal); 
 
-  cout << "TEST 1: Inserting nodes into the BST in the following order: 5, 3, 1, 4, 7, 8" << endl; 
-  stack<int> newStack; 
-  stack<int> stack; 
-
-  // stack works 
-  Node* root = nullptr;
-  stack = fillStack(); 
-
-  while(!stack.empty()) {
-    //swapping them 
-    newStack.push(stack.top()); 
-    stack.pop(); 
-  }
-
-  //must set base case 
-  root = new Node(newStack.top()); 
-
-  while(!newStack.empty()) {
-    insert(root, newStack.top()); 
-    newStack.pop(); 
-      // stack.pop(); 
-
-  }
-  printNodes(root); 
-
-  cout << endl << endl; 
-  cout << "Delete node 4: " << endl; 
-  cout << "Node 4 has been deleted" << endl; 
-  RemoveThis(root, 4);
-  printNodes(root); 
-  cout << endl; 
-
-  cout << endl; 
-  cout << "Insert node 2: " << endl; 
-  cout << "Node 2 has been inserted " << endl; 
-  insert(root, 2); 
-  printNodes(root); 
-  cout << endl << endl; 
-
-  cout << "Insert node 7" << endl; 
-  // cout << "Node 7 has been inserted" << endl; 
-  insert(root, 7); 
-  printNodes(root); 
-  cout << endl << endl; 
-
-  cout << "Inserting node 6 " << endl; 
-  insert(root, 6); 
-  cout << "Node 6 has been inserted" << endl; 
-  printNodes(root); 
-  cout << endl << endl; 
-
-  cout << "Deleting node 7" << endl; 
-  cout << "Node 7 has been deleted" << endl; 
-  RemoveThis(root, 7); 
-  printNodes(root); 
-  cout << endl << endl; 
-
-  cout << "BST Node with the smallest value" << endl; 
-  // Node* min = findMin(root); 
-  // int min = findMinNumber(root); 
-  cout << "Node: " << findMin(root)->number << endl; 
-  printNodes(root); 
-  cout << endl << endl ; 
-
-  cout << "Search for Node 9" << endl; 
-  PrintSearch(root, 9); 
-  printNodes(root); 
-  cout << endl << endl; 
-
-  cout << "BST Node with highest value" << endl; 
-  cout << "Node: " << findMax(root)->number << endl; 
-  printNodes(root); 
+  bool quit = false; 
+  while(!quit) {
+    int input = homeMessage(); 
+    // cout << "NUMBER: " << number; 
+    if(input == 1) {
+      //make method that will convert number to node 
+      int insertedNum = -1; 
+      cout << "What number do you want to input " << endl; 
+      cin >> insertedNum; 
+      insert(root, insertedNum); 
+    } else if(input == 2) {
+      if(root->number >= 0) {
+        int insertedNum = -1; 
+        cout << "What number do you want to remove " << endl; 
+        cin >> insertedNum; 
+        root = Remove(root, insertedNum); 
+      }
+    } else if(input == 3) {
+        int insertedNum = -1; 
+        cout << "What number do you want to Search for " << endl; 
+        cin >> insertedNum; 
+        // root = Remove(root, insertedNum); 
+        PrintSearch(root, insertedNum); 
+    } else if(input == 4) {
+        cout << "Minimum Value is: " << findMin(root)->number << endl; 
+      } else if(input == 5) {
+        cout << "Maximum Value is: " << findMax(root)->number << endl; 
+      } else if(input == 9) {
+        cout << "Final Tree: "; 
+        printNodes(root); 
+        quit = true; 
+      } else {
+        cout << "Enter a valid value" << endl; 
+      }
+      printNodes(root);
+      cout << endl; 
+    }
 
   return 0; 
-
-}
-
+};

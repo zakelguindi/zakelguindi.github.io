@@ -1,0 +1,52 @@
+/* You will be connecting to the following json file using async await:  https://portiaportia.github.io/json/movies.json
+You will find the images under  https://portiaportia.github.io/json/ followed by the image path.
+An example image src: https://portiaportia.github.io/json/images/the-godfather.jpg
+Then you will parse the json file, and display the content as above.
+Make sure you properly style your content so that it aligns nicely as above.
+IMAGES: the-godfather.jpg, the-shawshank-redemption.jpg, pulp-fiction.jpg, the-dark-knight.jpg, goodfellas.jpg
+This article can help you achieve the image hover effect (https://www.w3schools.com/howto/howto_css_zoom_hover.asp)*/
+
+/* Body */
+body {
+  background-color: grey;
+  text-decoration: none;
+  padding: 15px; 
+}
+.movie {
+  background-color: lightblue;
+  border: 5px solid dodgerblue;
+  width: 90%; 
+  height: 50%; 
+  padding: 10px; 
+  /* text-decoration: none; */
+}
+
+.div-formatting {
+  padding: 10px; 
+  display: flex; 
+}
+
+img:hover {
+  /* width: 120%; 
+  height: 150%; 
+   */
+   transform: scale(1.5);
+}
+
+/* Larger Resolutions */
+@media (min-width:900px){
+#movies-section {
+  display: flex; 
+  flex: 1; 
+  flex-wrap: wrap; 
+}
+
+}
+.img-format {
+width: 60%; 
+height: 80%; 
+/* border: 5px solid black;  */
+transition: transform .2s;
+padding: 10px; 
+/* margin: auto;  */
+}
