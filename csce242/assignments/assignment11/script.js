@@ -65,11 +65,6 @@ const getMoviesItem = (movie) => {
   description.innerHTML = movie.description; 
   infoSection.append(description); 
 
-  // const image = document.createElement("img"); 
-  // image.src = movie.img; 
-  // image.classList.add("img-format");
-  // console.log(image); 
-  // a.append(image);  
   a.classList.add("div-formatting"); 
   a.append(imgSection); 
   a.append(infoSection); 
