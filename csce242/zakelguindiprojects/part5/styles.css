@@ -25,40 +25,57 @@ body {
   /* display: flex;  */
 }
 
-#home-content-main {
+.project {
+  border: 5px solid var(--textcolor); 
+  margin: auto; 
+  padding: 5px; 
+}
+
+/* #home-content-main {
   position: absolute; 
-  /* top: 5%; */
   left: 5%; 
   width: 70%; 
   padding: 10px;
   margin: auto; 
-}
+} */
 
 #personal-introduction {
   position: absolute; 
-  top: 50%; 
+  /* width: 50%; */
+  /* top: 50%;  */
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 #home-about-me {
-  position: absolute; 
-  top: 1500%; 
+  position: relative; 
+  margin-left: 5%; 
+  margin-top: 12.5%;
+  width: 60%; 
 }
 
 #home-about-me li {
   padding: 10px;
 }
 
+#project-formatting{ 
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
 #sidebar-content {
-  position: absolute; 
-  right: 5%; 
-  width: 30%; 
-  padding: 10px; 
-  margin: auto; 
+  position: relative; 
+  width: 20%; 
+  /* right: 5%;  */
+  /* width: 15%;  */
+  /* padding: 10px;  */
+  /* margin-left: 0%;  */
+  /* margin-top: ; */
 }
 
 #projects-nav {
   position: absolute; 
-  top: 1000%; 
+  margin-top: 20%;
   right: 0%; 
 }
 
@@ -93,9 +110,12 @@ li {
 }
 
 footer {
-  position: absolute; 
-  left: 5%; 
-  bottom: 5%; 
+  position: relative; 
+  margin-left: 5%;
+  margin-bottom: 5%;
+  /* margin-top:80%;  */
+  /* left: 5%; 
+  bottom: 95%;  */
 }
 
 footer ul {
@@ -134,17 +154,21 @@ footer ul {
 }
 
 #project-main-div {
-  width: 70%; 
-  position:absolute; 
-  top: 20%; 
-  left: 5%; 
+  width: 60%; 
+  position:relative; 
+  margin-top: 10%;
+  margin-left: 5%;
+  /* top: 20%; 
+  left: 5%;  */
 }
 
 /* admin login section */
 #login-section {
-  position: absolute; 
-  top: 30%; 
-  left: 30%; 
+  width: 50%; 
+  height: 400px; 
+  position:relative; 
+  margin-top: 15%;
+  margin-left: 25%;
 }
 
 /* hover on link */
@@ -155,8 +179,9 @@ a:hover {
 }
 
 #enter-button {
-  position: absolute; 
-  left: 80%;
+  position: relative; 
+  margin-left: 25%;
+  /* left: 80%; */
 }
 
 #enter-button a {
@@ -170,9 +195,10 @@ a:hover {
 }
 
 #admin-functionality-div {
-  position: absolute; 
-  left: 10%; 
-  top: 20%; 
+  position: relative; 
+  width: 30%; 
+  margin-left: 35%; 
+  margin-top: 10%; 
 }
 
 #admin-functionality-div button {
