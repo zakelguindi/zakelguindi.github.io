@@ -20,8 +20,7 @@ const showShoes = async() => {
 
   shoes.forEach(shoe => {
     shoeList.append(getShoeSection(shoe));
-  });
-  
+  });  
 };
 
 const getShoeSection = (shoe) => {
