@@ -1,0 +1,20 @@
+Creating Server Code
+  Create your node server with express
+  You will create an array of items, when the user goes to a link like: .../api/data, they will see a json list.
+  This will be created using javaScript and express.
+Creating the Data
+  On a topic of your choice
+  Contains at least 5 records, which each:
+    Contains at least 6 properties
+    1 of which is an array of data
+    1 of which is a link to a picture you are hosting
+  Make it seem coherent
+  To clarify, this is like a class with 6 properties, and 5 instances of the class.
+Client Side Code
+  Create the index.html page, along with the script.js and styles.css
+  On this page, all the information in the JSON files fetched from the server will be beautifully displayed, using
+    CSS and flexbox
+  Make sure to show the images for each record
+  Make sure the arrays are displayed in a desirable fashion
+  The format you display your content in, cannot closely resemble something that we've done previously. Be creative!
+  Make sure you are doing everything from scratch, and are not copying and pasting from the work we did in class.
