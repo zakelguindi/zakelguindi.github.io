@@ -1,32 +1,32 @@
-const getRecipes = async () => {
+const getRecipes = async() => {
   try {
-    return (await fetch("api/recipes/")).json();
+      return (await fetch("api/recipes/")).json();
   } catch (error) {
-    console.log(error);
+      console.log(error);
   }
 };
 
-const showRecipes = async () => {
+const showRecipes = async() => {
   let recipes = await getRecipes();
   let recipesDiv = document.getElementById("recipe-list");
   recipesDiv.innerHTML = "";
   recipes.forEach((recipe) => {
-    const section = document.createElement("section");
-    section.classList.add("recipe");
-    recipesDiv.append(section);
+      const section = document.createElement("section");
+      section.classList.add("recipe");
+      recipesDiv.append(section);
 
-    const a = document.createElement("a");
-    a.href = "#";
-    section.append(a);
+      const a = document.createElement("a");
+      a.href = "#";
+      section.append(a);
 
-    const h3 = document.createElement("h3");
-    h3.innerHTML = recipe.name;
-    a.append(h3);
+      const h3 = document.createElement("h3");
+      h3.innerHTML = recipe.name;
+      a.append(h3);
 
-    a.onclick = (e) => {
-      e.preventDefault();
-      displayDetails(recipe);
-    };
+      a.onclick = (e) => {
+          e.preventDefault();
+          displayDetails(recipe);
+      };
   });
 };
 
@@ -56,71 +56,68 @@ const displayDetails = (recipe) => {
   recipeDetails.append(ul);
   console.log(recipe.ingredients);
   recipe.ingredients.forEach((ingredient) => {
-    const li = document.createElement("li");
-    ul.append(li);
-    li.innerHTML = ingredient;
+      const li = document.createElement("li");
+      ul.append(li);
+      li.innerHTML = ingredient;
   });
 
   eLink.onclick = (e) => {
-    e.preventDefault();
-    document.querySelector(".dialog").classList.remove("transparent");
-    document.getElementById("add-edit-title").innerHTML = "Edit Recipe";
+      e.preventDefault();
+      document.querySelector(".dialog").classList.remove("transparent");
+      document.getElementById("add-edit-title").innerHTML = "Edit Recipe";
   };
 
   dLink.onclick = (e) => {
-    e.preventDefault();
-    //delete recipe
+      e.preventDefault();
+      //delete recipe
   };
 
   populateEditForm(recipe);
 };
 
-const populateEditForm = (recipe) => {
-
-};
+const populateEditForm = (recipe) => {};
 
 const addEditRecipe = async(e) => {
   e.preventDefault();
   const form = document.getElementById("add-edit-recipe-form");
-  //create form data object 
-  const formData = new FormData(form); 
-  
-  let response; 
-
-  // console.log("here"); 
-
+  const formData = new FormData(form);
+  let response;
   //trying to add a new recipe
-  if(form._id.value == -1) {
-    //you're in add request 
-    formData.delete("_id");
-    formData.delete("img");
-    
-    formData.append("ingredients", getIngredients()); 
+  if (form._id.value == -1) {
+      formData.delete("_id");
+      formData.delete("img");
+      formData.append("ingredients", getIngredients());
 
-    response = await fetch("/api/recipes", {
-      method: "POST", 
-      body: formData
-    });
+      console.log(...formData);
 
+      response = await fetch("/api/recipes", {
+          method: "POST",
+          body: formData
+      });
+
+      console.log(response.status);
   }
 
-  response = await response.json(); 
-  showRecipes(); 
+  //successfully got data from server
+  if (response.status != 200) {
+      console.log("Error posting data");
+  }
 
-  //spread operator 
-  console.log(...formData); 
+  response = await response.json();
+  resetForm();
+  document.querySelector(".dialog").classList.add("transparent");
+  showRecipes();
 };
 
 const getIngredients = () => {
-  const inputs = document.querySelectorAll("#ingredient-boxes-input"); 
+  const inputs = document.querySelectorAll("#ingredient-boxes input");
+  let ingredients = [];
 
-  let ingredients = []; //return array 
-  
   inputs.forEach((input) => {
-    ingredients.push(input.value); //populate return array 
+      ingredients.push(input.value);
   });
 
-  return ingredients; 
+  return ingredients;
 }
 
 const resetForm = () => {
@@ -137,16 +134,13 @@ const showHideAdd = (e) => {
   resetForm();
 };
 
-//works
 const addIngredient = (e) => {
   e.preventDefault();
-  const section = document.getElementById("ingredient-boxes"); 
-  const input = document.createElement("input"); 
-  input.type = "text"; 
-  section.append(input); 
-};
-
-
+  const section = document.getElementById("ingredient-boxes");
+  const input = document.createElement("input");
+  input.type = "text";
+  section.append(input);
+}
 
 window.onload = () => {
   showRecipes();
@@ -154,9 +148,8 @@ window.onload = () => {
   document.getElementById("add-link").onclick = showHideAdd;
 
   document.querySelector(".close").onclick = () => {
-    document.querySelector(".dialog").classList.add("transparent");
+      document.querySelector(".dialog").classList.add("transparent");
   };
 
-  document.getElementById("add-ingredient").onclick = addIngredient; 
+  document.getElementById("add-ingredient").onclick = addIngredient;
 };
-
