@@ -69,13 +69,50 @@ const displayDetails = (recipe) => {
 
   dLink.onclick = (e) => {
       e.preventDefault();
+      deleteRecipe(recipe); 
       //delete recipe
   };
 
   populateEditForm(recipe);
 };
 
-const populateEditForm = (recipe) => {};
+const deleteRecipe = async(recipe) => {
+  let response = await fetch(`api/recipes/${recipe._id}`, {
+    method: "DELETE", 
+    headers : {
+      "Content-Type:":"application/json;charset=utf-8"
+    }
+  });
+
+  if(response.status != 200) {
+    console.log("baddness in deletion");
+    return; 
+  }
+
+  let result = await response.json(); 
+  showRecipes(); 
+  document.getElementById("recipe-details").innerHTML = ""; 
+  resetForm(); 
+};
+
+const populateEditForm = (recipe) => {
+  const form = document.getElementById("add-edit-recipe-form"); 
+  form._id.value = recipe._id; 
+  form.name.value = recipe.name; 
+  form.description.value = recipe.description; 
+  populateIngredients(recipe.ingredients);
+};
+
+const populateIngredients = (ingredients) => {
+  const section = document.getElementById("ingredient-boxes"); 
+
+  ingredients.forEach((ingredient) => {
+    const input = document.createElement("input"); 
+    input.type = "text"; 
+    input.value = ingredient; 
+    section.append(input); 
+  });
+}
 
 const addEditRecipe = async(e) => {
   e.preventDefault();
@@ -96,6 +133,13 @@ const addEditRecipe = async(e) => {
       });
 
       console.log(response.status);
+  } else {
+    formData.delete("img"); 
+    console.log(...formData);
+    response = await fetch(`/api/recipes/${form._id.value}`, {
+      method: "PUT", 
+      body: formData
+    });
   }
 
   //successfully got data from server
@@ -140,7 +184,7 @@ const addIngredient = (e) => {
   const input = document.createElement("input");
   input.type = "text";
   section.append(input);
-}
+};
 
 window.onload = () => {
   showRecipes();

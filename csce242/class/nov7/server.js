@@ -89,6 +89,46 @@ app.post("/api/recipes", upload.single("img"), (req, res) => {
     res.send(recipes);
 });
 
+app.put("/api/recipes/:id", upload.single("img"), (req, res) => {
+  const id = parseInt(req.params.id); 
+
+  const recipe = recipes.find((r) =>  r._id === id);
+  // console.log(recipe); 
+
+  const result = validateRecipe(req.body);
+
+  if(result.error) {
+    res.status(400).send(result.error.details[0].message); 
+    return;
+  };
+  // console.log("past validate"); 
+
+  // console.log("RECIPE"+recipe.ingredients); 
+  // console.log(req.body.ingredients); 
+
+  recipe.name = req.body.name; 
+  recipe.description = req.body.description; 
+  // recipe.ingredients = req.body.ingredients.split(",");
+
+  res.send(recipe); 
+});
+
+app.delete("/api/recipes/:id", upload.single("img"), (req, res) => {
+  const id = parseInt(req.params.id); 
+
+  const recipe = recipes.find((r) =>  r._id === id);
+  console.log("found recipe to delete"+recipe); 
+
+  if(!recipe) {
+    res.status(404).send("The recipe wasn't found"); 
+    return; 
+  }
+
+  const index = recipes.indexOf(recipe); 
+  recipes.splice(index, 1); //remove 1 index from that recipe
+  res.send(recipe); 
+});
+
 const validateRecipe = (recipe) => {
     const schema = Joi.object({
         _id: Joi.allow(""),
@@ -99,6 +139,8 @@ const validateRecipe = (recipe) => {
 
     return schema.validate(recipe);
 };
+
+
 
 app.listen(3005, () => {
     console.log("I'm listening");
