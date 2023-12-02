@@ -10,16 +10,30 @@ using std::cout;
 using std::endl; 
 
 
-void Swap(int& a, int& b) {
-  int temp = a; 
-  a = b; 
-  b = temp; 
+//tested and works
+void Swap(int * nums, int a, int b) {
+  if(a == b) {
+    // cout << "EQUAL NUMBERS" << endl;
+    return; 
+  }
+  int temp = nums[a]; 
+  nums[a] = nums[b]; 
+  nums[b] = temp; 
+
+
 };
 
 
+//tested and works 
 int MedianOf(int a, int b, int c) {
+  cout << "Finding... " <<a << ", " << b << ", and " << c << endl; 
   // check a then b then c 
   //if a > b and a < c OR a > c and a < b, then a is median 
+  if(a == b || a == c) {
+    return a; 
+  } else if( b == c) {
+    return b; 
+  }
   if((a > b && a < c) || (a > c && b > c)) {
     return a; 
   }
@@ -34,75 +48,93 @@ int MedianOf(int a, int b, int c) {
 }
 
 int HoarePartition(int* numbers, int left, int right) {
-  //no bugs in Hoare
-  int pivot = numbers[left];
-  int middle = floor((left + right)/2); 
-  // int pivot = numbers[MedianOf(numbers[left], numbers[middle], numbers[right])];
 
-  int i = left; 
-  int j = right; 
+  // cout << "2: "; 
+  // for(int i = left; i<=right; i++) {
+  //   cout << numbers[i] << ", "; 
+  // }
+  // cout << endl; 
 
-  int split = 0;
-  for(int k = left+1; k <= right; k++) {
-    if(numbers[k] <= pivot) {
-      split++;
-    }
+  int pivot = numbers[left]; 
+  if((left-right) > 3) {
+    // cout << "RUNNiNG " << left << ", " << right << endl; 
+    int middle = floor((left+right)/2); 
+    // cout << numbers[left] << ", " << numbers[middle] << ", " <<numbers[right] << endl;
+    int pivotIndex = MedianOf(numbers[left], numbers[middle], numbers[right]); 
+    // cout << "PIVOT INDEX" << pivotIndex << endl; 
+    // Swap(numbers, left, pivotIndex); 
+    // cout << "after swap: " << numbers[left] << endl; 
+    pivot = numbers[pivotIndex]; 
   }
 
-  int splitIndex = split + left; 
+  // cout << "3: "; 
+  // for(int i = left; i<=right; i++) {
+  //   cout << numbers[i] << ", "; 
+  // }
+  // cout << endl; 
 
-  Swap(numbers[splitIndex], numbers[left]); 
-  
-  while(i < splitIndex && j > splitIndex) {
-    while(numbers[i] <= pivot) {
+  // pivot = numbers[left]; 
+  // pivot = numbers[MedianOf(numbers[left], numbers[middle], numbers[right])];
+  int i = left--; 
+  int j = right++; 
+
+  while(i < j) {
+    while(numbers[i] < pivot) {
       i++; 
     }
     while(numbers[j] > pivot) {
       j--;
     }
-    if(i < splitIndex && j > splitIndex) {
-      Swap(numbers[i++], numbers[j--]);
+    if(i >= j) {
+      return j; 
     }
-  }
 
-  return splitIndex; 
+    Swap(numbers, i, j); 
+  }
+  return j; 
 };
 
 
 
 void QuickSort(int* numbers, int left, int right) { 
-
-  // cout << "ORIGINAL: "; 
-  // for(int i=0; i<right; i++) {
-  //   cout << numbers[i] << ", "; 
-  // }
-  // cout << endl; 
-
-  if(left >= right) {
-    return; 
-  }
-
-  int split = HoarePartition(numbers, left, right); 
-
-  QuickSort(numbers, left, split-1); 
-  QuickSort(numbers, split+1, right); 
   
+  if(left < right) {
+    // cout << "running " << left << ", " << right << endl; 
+    // cout << "1: "; 
+    // for(int i = 0; i<=right; i++) {
+    //   cout << numbers[i] << ", "; 
+    // }
+    // cout << endl; 
+    int split = HoarePartition(numbers, left, right); 
+
+    // cout << "4: "; 
+    // for(int i = 0; i<=right; i++) {
+    //   cout << numbers[i] << ", "; 
+    // }
+    // cout << endl; 
+    QuickSort(numbers, left, split); 
+    QuickSort(numbers, split+1, right); 
+  }
 };
 
 
 
 
 int main() {
-  int numbers[] = {5, 3, 1, 9, 8, 2, 4, 7};
-  int size = *(&numbers + 1) - numbers; 
+  int numbers[] = {5, 3, 1, 11, 8, 2, 4, 7};
+  int size = sizeof(numbers)/sizeof(numbers[0]);
   cout << "SIZE: " << size << endl; 
 
-  queue<int> nums; 
+  QuickSort(numbers, 0, size - 1);   
+  cout << "SIZE: " << size << endl; 
 
-  QuickSort(numbers, 0, size); 
   // int size = *(&numbers + 1) - numbers; 
   for(int i=0; i<size; i++) {
     cout << numbers[i] << ", "; 
   }
   cout << endl; 
+
+  cout << "MEDIAN OF: " << MedianOf(2, 6, 4) << endl; 
+
+  return 0; 
 }
