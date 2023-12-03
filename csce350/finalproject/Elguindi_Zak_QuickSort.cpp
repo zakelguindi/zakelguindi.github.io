@@ -1,10 +1,8 @@
 #include<iostream>
 #include<algorithm>
-#include<queue>
 #include<cmath>
 using std::max; 
 using std::min; 
-using std::queue; 
 using std::cin; 
 using std::cout; 
 using std::endl; 
@@ -49,32 +47,14 @@ int MedianOf(int a, int b, int c) {
 
 int HoarePartition(int* numbers, int left, int right) {
 
-  // cout << "2: "; 
-  // for(int i = left; i<=right; i++) {
-  //   cout << numbers[i] << ", "; 
-  // }
-  // cout << endl; 
 
   int pivot = numbers[left]; 
   if((left-right) > 3) {
-    // cout << "RUNNiNG " << left << ", " << right << endl; 
     int middle = floor((left+right)/2); 
-    // cout << numbers[left] << ", " << numbers[middle] << ", " <<numbers[right] << endl;
     int pivotIndex = MedianOf(numbers[left], numbers[middle], numbers[right]); 
-    // cout << "PIVOT INDEX" << pivotIndex << endl; 
-    // Swap(numbers, left, pivotIndex); 
-    // cout << "after swap: " << numbers[left] << endl; 
     pivot = numbers[pivotIndex]; 
   }
 
-  // cout << "3: "; 
-  // for(int i = left; i<=right; i++) {
-  //   cout << numbers[i] << ", "; 
-  // }
-  // cout << endl; 
-
-  // pivot = numbers[left]; 
-  // pivot = numbers[MedianOf(numbers[left], numbers[middle], numbers[right])];
   int i = left--; 
   int j = right++; 
 
@@ -99,19 +79,9 @@ int HoarePartition(int* numbers, int left, int right) {
 void QuickSort(int* numbers, int left, int right) { 
   
   if(left < right) {
-    // cout << "running " << left << ", " << right << endl; 
-    // cout << "1: "; 
-    // for(int i = 0; i<=right; i++) {
-    //   cout << numbers[i] << ", "; 
-    // }
-    // cout << endl; 
+
     int split = HoarePartition(numbers, left, right); 
 
-    // cout << "4: "; 
-    // for(int i = 0; i<=right; i++) {
-    //   cout << numbers[i] << ", "; 
-    // }
-    // cout << endl; 
     QuickSort(numbers, left, split); 
     QuickSort(numbers, split+1, right); 
   }
@@ -123,18 +93,21 @@ void QuickSort(int* numbers, int left, int right) {
 int main() {
   int numbers[] = {5, 3, 1, 11, 8, 2, 4, 7};
   int size = sizeof(numbers)/sizeof(numbers[0]);
-  cout << "SIZE: " << size << endl; 
 
-  QuickSort(numbers, 0, size - 1);   
-  cout << "SIZE: " << size << endl; 
-
-  // int size = *(&numbers + 1) - numbers; 
+  cout << "PRE SORT: "; 
   for(int i=0; i<size; i++) {
     cout << numbers[i] << ", "; 
   }
   cout << endl; 
 
-  cout << "MEDIAN OF: " << MedianOf(2, 6, 4) << endl; 
+  QuickSort(numbers, 0, size - 1);   
+
+  cout << "POST SORT: "; 
+  for(int i=0; i<size; i++) {
+    cout << numbers[i] << ", "; 
+  }
+  cout << endl; 
+
 
   return 0; 
 }
