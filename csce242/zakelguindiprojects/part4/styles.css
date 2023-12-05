@@ -93,7 +93,7 @@ li {
 }
 
 footer {
-  position: absolute; 
+  position: relative; 
   left: 5%; 
   bottom: 5%; 
 }

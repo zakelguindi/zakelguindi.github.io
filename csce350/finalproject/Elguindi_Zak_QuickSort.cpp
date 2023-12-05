@@ -1,6 +1,10 @@
 #include<iostream>
 #include<algorithm>
 #include<cmath>
+#include<fstream>
+#include<string>
+using std::string; 
+using namespace std; 
 using std::max; 
 using std::min; 
 using std::cin; 
@@ -91,6 +95,8 @@ void QuickSort(int* numbers, int left, int right) {
 
 
 int main() {
+
+
   int numbers[] = {5, 3, 1, 11, 8, 2, 4, 7};
   int size = sizeof(numbers)/sizeof(numbers[0]);
 
@@ -108,6 +114,26 @@ int main() {
   }
   cout << endl; 
 
+//writing to file 
+  ofstream myfile;
+  myfile.open ("output.txt"); 
+  myfile << "Writing to this file.\n"; 
+  myfile.close(); 
 
+  fstream newfile; 
+  newfile.open("input.txt"); 
+  newfile << "Hello World\n";
+  newfile << "ANOTHER LINE\n"; 
+  newfile.close();
+
+//reading from file 
+  newfile.open("input.txt"); 
+  string thing; 
+  while(getline(newfile, thing)) {
+    cout << thing << "\n";
+  }
+  newfile.close(); 
+
+  
   return 0; 
 }
