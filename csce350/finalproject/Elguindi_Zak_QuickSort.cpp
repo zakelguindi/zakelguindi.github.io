@@ -76,7 +76,7 @@ void HoarePartition(int* numbers, int left, int right, int pivot, int& piv1, int
       Swap(numbers, r, u); 
       u--; 
     } else {
-      //numbers are even 
+      //pivot = numbers[r] 
       r++; 
     }
   }

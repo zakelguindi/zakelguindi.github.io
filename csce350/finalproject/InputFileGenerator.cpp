@@ -18,14 +18,14 @@ void GenerateInputs(char* argv[]) {
   int thisSize = 10; 
 
   fstream recordTime;
-  std::ofstream { "executionTimes.txt"};
-  recordTime.open("executionTimes.txt"); 
+  std::ofstream { "Elguindi_Zak_executionTime.txt"};
+  recordTime.open("Elguindi_Zak_executionTime.txt"); 
 
   recordTime << "Input Size\tExecution Time\n"; 
 
   fstream recordAvgTime; 
-  std::ofstream{"avgExecutionTimes.txt"};
-  recordAvgTime.open("avgExecutionTimes.txt"); 
+  std::ofstream{"Elguindi_Zak_averageExecutionTime.txt"};
+  recordAvgTime.open("Elguindi_Zak_averageExecutionTime.txt"); 
   recordAvgTime << "Input Size\tAverage Execution Time\n";
  
 
