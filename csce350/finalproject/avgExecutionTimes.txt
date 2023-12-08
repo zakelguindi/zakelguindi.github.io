@@ -1,0 +1,4 @@
+Input Size	Average Execution Time
+10					0.57988
+100					6.96396
+1000					73.6027
