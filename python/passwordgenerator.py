@@ -8,6 +8,7 @@ while run.lower() != 'stop':
     passwordSize = input("Enter the desired length of your password\n")
     password = ""
 
+# populating all possible characters
     numbers = []
     numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     lettersUpper = [0] * 26
@@ -20,8 +21,10 @@ while run.lower() != 'stop':
         indexLower = ord('a') + i 
         lettersLower[i] = chr(indexLower)
 
+# adding all possible characters into one array
     totalChars = np.concatenate((numbers, lettersLower, lettersUpper, specials))
 
+# assigning random characters from total array to a character in the password 
     for char in range(int(passwordSize)):
         index = r.randint(0, totalChars.size)
         password = password + str(totalChars[index])
